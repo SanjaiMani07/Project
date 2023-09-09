@@ -1,0 +1,135 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;1,300&display=swap');
+ 
+*{
+    margin:0;
+    padding: 0;
+    box-sizing:border-box;
+    font-family:'poppins',sans-serif;
+} 
+.body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: blue;
+}
+.logo{
+    height: 50px;
+    width: 150px;
+    float: right;
+}
+.container{
+    position: relative;
+    max-width: 900px;
+    width: 100%;
+    border-radius: 6px;
+    padding: 30px;
+    margin: auto;
+    background-color:black;
+    box-shadow: 0 5px 10px rgba(0,0,0,0,1);
+}
+.container header{
+    font-size: 30px;
+    font-weight: bold;
+    color:white;
+}
+.container header::before{
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    height: 3px;
+    width: 27px;
+    background-color: #4070f4;
+}
+.container form{
+    position: relative;
+    margin-top: 16px;
+    min-height: 490px;
+    background-color: blue;
+
+}
+.container form .details{
+    margin-top: 10px;
+}
+.container form .title{
+    display: block;
+    margin-bottom: 8px;
+    font-size: 22px;
+    font-weight: bold;
+    margin: 6px 0;
+    color:black;
+}
+.container form .fields{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+form .fields .input-field{
+    display: flex;
+    width: calc(100% / 3 - 15px);
+    flex-direction: column;
+    margin: 4px 0;
+}
+.input-field label{
+    font-size: 12px;
+    font-weight: bold;
+    color: black;
+}
+.input-field input{
+    outline: none;
+    border: 1px solid  grey;
+    padding: 0 15px;
+    font-size: 14px;
+    font-weight: 400;
+    color: black;
+    border-radius: 5px;
+    height: 42px;
+    margin: 8px 0;
+}
+.Detail{
+    outline: none;
+    border: 1px solid  grey;
+    padding: 0 15px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #333;
+    border-radius: 5px;
+    height: 42px;
+    margin: 8px 0;
+}
+.input-field input:is(:focus, :valid){
+    box-shadow: 0 3px 6px rgba(0,0,0,0,13);
+}
+.input.field input[type="date"]{
+    color: white;
+}
+.input.field input[type="date"]:valid{
+    color: white;
+}
+.SUBMIT {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+    max-width: 200px;
+    width: 100%;
+    border: 1px solid white;
+    color: #fff;
+    border-radius: 5px;
+    margin: 10px 0;
+    background-color:red;
+    transition: all 0.3s linear;
+    cursor: pointer;
+}
+@media (max-width:750px){
+    form .fields .input-field{
+        width: calc(49% - 7px);
+        }
+    }
+    @media (max-width:550px) {
+        form .fields .input-field{
+            width:100%;
+            }
+    }
